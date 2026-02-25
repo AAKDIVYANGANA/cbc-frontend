@@ -68,3 +68,5 @@ useEffect(
     </div>
   )
 }
+//https://bhuhgxhxpjdrxmmhabyc.supabase.co
+//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJodWhneGh4cGpkcnhtbWhhYnljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIwMDE2MjUsImV4cCI6MjA4NzU3NzYyNX0._l20WlzOQMMiygb4sLkWvB4RR4fuxPZw83gSPaYdjgQ
