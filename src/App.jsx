@@ -4,17 +4,20 @@ import './App.css';
 import AdminPage from './pages/adminPage';
 import LoginPage from './pages/loginPage';
 import Testing from './pages/testing';
+import RegisterPage from './pages/client/register';
+import HomePage from './pages/homaPage';
 
 function App() {
   return (
     <BrowserRouter>
       <Toaster position="top-right"/>
       <Routes>
-        <Route path="/" element={<h1>Home</h1>} />
+        <Route path="/*" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/testing" element={<Testing />} />
+        <Route path="/register" element={<RegisterPage />} /> 
         <Route path="/admin/*" element={<AdminPage />} />
-        <Route path="/*" element={<h1>404 Not Found</h1>} />
+        
       </Routes>
     </BrowserRouter>
   );

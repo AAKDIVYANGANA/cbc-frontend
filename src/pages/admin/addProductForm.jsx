@@ -3,15 +3,15 @@ import { toast } from "react-hot-toast";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { createClient } from "@supabase/supabase-js"; // ✅ Add this
+import { createClient } from "@supabase/supabase-js"; 
 
-// ✅ Create supabase client
+
 const supabase = createClient(
     import.meta.env.VITE_SUPABASE_URL,
     import.meta.env.VITE_SUPABASE_ANON_KEY
 );
 
-// ✅ Define mediaUpload function
+
 async function mediaUpload(file) {
     const { data, error } = await supabase.storage
         .from("images")
@@ -21,7 +21,7 @@ async function mediaUpload(file) {
         });
     if (error) throw error;
 
-    // Get public URL of uploaded image
+    
     const { data: urlData } = supabase.storage
         .from("images")
         .getPublicUrl(data.path);
@@ -42,14 +42,14 @@ export default function AddProductForm() {
     const navigate = useNavigate();
 
     async function handleSubmit() {
-        // Validate fields
+        
         if (!productID || !productName || !price || !labeledPrice || !description || !stock) {
             toast.error("Please fill all fields");
             return;
         }
 
         try {
-            // Upload all images and get URLs
+            
             const promisesArray = [];
             for (let i = 0; i < images.length; i++) {
                 const promise = mediaUpload(images[i]);
