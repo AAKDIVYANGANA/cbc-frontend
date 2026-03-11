@@ -1,6 +1,7 @@
 import { Routes, Route, Link } from "react-router-dom";
 import { HiOutlineUsers } from "react-icons/hi2";
 import AdminProductPage from "./admin/product";
+import AdminOrdersPage from "./admin/adminOrders";
 import AddProductForm from "./admin/addProductForm";
 import EditProductForm from "./admin/editProduct";
 
@@ -26,7 +27,7 @@ export default function AdminPage() {
         <Routes>
           <Route path="users" element={<h1>Users</h1>} />
           <Route path="products" element={<AdminProductPage />} />
-          <Route path="orders" element={<h1>Orders</h1>} />
+          <Route path="orders" element={<AdminOrdersPage />} />
           <Route path="addproduct" element={<AddProductForm/>} />
           <Route path="editProduct" element={<EditProductForm/>} />
         </Routes>
