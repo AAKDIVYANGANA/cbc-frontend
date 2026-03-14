@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import { TbTrash } from "react-icons/tb";
 import { useLocation, useNavigate } from "react-router-dom";
 
-export default function CheckoutPage() {
+export default function CheckoutPage(){
   const location = useLocation();
   const navigate = useNavigate();
   const [cart, setCart] = useState(location.state?.items || []);

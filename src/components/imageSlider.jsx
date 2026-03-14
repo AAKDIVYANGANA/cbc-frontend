@@ -1,30 +1,41 @@
 import { useState } from "react";
 
-export default function ImageSlider(props) {
-    const images = props.images
-    const [activeImage, setActiveImage] = useState(images[0])
-    
-    
-    return (
-        <div className="w-full h-full flex items-center justify-center">
-          <div className="bg-green-500 w-[70%] aspect-square relative">
-            <img src={activeImage} className="w-full h-full object-cover"/>
-            <div className="h-[100px] w-full backdrop-blur-3xl absolute bottom-0 left-0 flex items-center justify-center">
-               {
-                    images.map(
-                        (image,index) => {
-                            return(
-                            <img key={index} src={image} className="h-full aspect-square mx-[5px] cursor-pointer" onClick={
-                                () => {
-                                    setActiveImage(image)
-                                }
-                            }  />
-                            )
-                }
-            )
-        }
-                </div>
-            </div>
-        </div>
-    )
+export default function ImageSlider({ images = [] }) {
+  const [activeImage, setActiveImage] = useState(images[0]);
+
+  if (!images || images.length === 0) return null;
+
+  return (
+    <div className="w-full flex flex-col items-center">
+      {/* MAIN LARGE IMAGE */}
+      <div className="w-full aspect-square overflow-hidden mb-2">
+        <img
+          src={activeImage}
+          alt="Product"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* THUMBNAILS - Centered and smaller */}
+      <div className="flex justify-center items-center gap-1 w-full overflow-x-auto py-1">
+        {images.map((img, idx) => (
+          <div
+            key={idx}
+            onClick={() => setActiveImage(img)}
+            className={`cursor-pointer overflow-hidden transition-all duration-200 ${
+              activeImage === img 
+              ? "border-2 border-[#b32d5b] opacity-100" 
+              : "border-2 border-transparent opacity-60 hover:opacity-100"
+            }`}
+          >
+            <img 
+              src={img} 
+              alt={`thumb-${idx}`} 
+              className="w-[70px] h-[70px] md:w-[85px] md:h-[85px] object-cover" 
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
