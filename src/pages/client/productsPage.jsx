@@ -20,7 +20,7 @@ export default function ProductsPage() {
                 setProductsLoaded(true)
             })
         }
-    }, [productsLoaded])
+    }, [productsLoaded, search])
 
     return (
         <div className="w-full min-h-full" style={{ background: "#fdf6f9", fontFamily: "'Georgia', serif" }}>

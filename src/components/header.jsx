@@ -53,7 +53,7 @@ export default function Header() {
                   background: "linear-gradient(to right, #f9a8c9, #e879a0)",
                 }}
               />
-              {/* hover underline via CSS workaround */}
+              
               <style>{`
                 .nav-link-${link.to.replace("/", "nav")}:hover span { width: 100% !important; }
               `}</style>

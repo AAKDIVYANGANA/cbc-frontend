@@ -21,7 +21,7 @@ export default function UserData() {
                 setUser(null);
             });
         }
-    }, []);
+    }, [token]);
 
     return (
         user == null ? (

@@ -14,7 +14,7 @@ export default function ProductOverview() {
 
   useEffect(() => {
     if (!params.id) navigate("/products");
-  }, [params.id]);
+  }, [params.id, navigate]);
 
   useEffect(() => {
     if (params.id) {
