@@ -38,7 +38,7 @@ export default function AdminPage() {
           navigate("/login");
         });
     }
-  }, []); 
+  }, [navigate]); 
 
   return (
     <div className="w-full h-screen bg-gray-200 flex p-2">
