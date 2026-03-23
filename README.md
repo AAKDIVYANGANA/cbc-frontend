@@ -37,7 +37,7 @@ This repository contains the **frontend (React.js)** of the system.
 ![Browse](./screenshots/Products.png)
 
 ### 🛒 Shopping Cart
-![Cart](./screenshots/Shopping cart.png)
+![Cart](./screenshots/Shoppingcart.png)
 
 ### 💳 Checkout Flow
 ![Checkout](./screenshots/Checkout.png)
@@ -46,7 +46,15 @@ This repository contains the **frontend (React.js)** of the system.
 ![Admin](./screenshots/Admin.png)
 
 ### 🔐 Sign In (Google OAuth)
-![Login](./screenshots/Sign in.png)
+![Login](./screenshots/Signin.png)
+
+🔗 Backend Repository
+
+👉 https://github.com/AAKDIVYANGANA/cbc-backend
+
+🙌 About the Project
+
+This project was developed to enhance my full-stack development skills using the MERN stack, focusing on building real-world e-commerce functionality including authentication, cart management, and checkout systems.
 
 ---
 
