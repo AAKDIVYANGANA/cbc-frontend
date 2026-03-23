@@ -31,22 +31,22 @@ This repository contains the **frontend (React.js)** of the system.
 ## 📸 Screenshots
 
 ### 🏠 Hero Product Page
-![Hero](./screenshots/image_c.jpg)
+![Hero](./screenshots/Home.png)
 
 ### 🔍 Browsing Experience
-![Browse](./screenshots/Products.jpg)
+![Browse](./screenshots/Products.png)
 
 ### 🛒 Shopping Cart
-![Cart](./screenshots/image_d.jpg)
+![Cart](./screenshots/Shopping cart.png)
 
 ### 💳 Checkout Flow
 ![Checkout](./screenshots/Checkout.png)
 
 ### 👩‍💻 Admin Dashboard
-![Admin](./screenshots/Admin.jpg)
+![Admin](./screenshots/Admin.png)
 
 ### 🔐 Sign In (Google OAuth)
-![Login](./screenshots/Sign in.jpg)
+![Login](./screenshots/Sign in.png)
 
 ---
 
