@@ -2,6 +2,7 @@ import { Routes, Route, Link, useNavigate, useLocation } from "react-router-dom"
 import { HiOutlineUsers } from "react-icons/hi2";
 import { BsBoxSeam } from "react-icons/bs";
 import { HiOutlineClipboardList } from "react-icons/hi";
+import { HiOutlineLogout } from "react-icons/hi";
 import AdminProductPage from "./admin/product";
 import AdminOrdersPage from "./admin/adminOrders";
 import AddProductForm from "./admin/addProductForm";
@@ -48,6 +49,13 @@ export default function AdminPage() {
   ];
 
   const isActive = (path) => location.pathname.startsWith(path);
+
+  function handleLogout() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    toast.success("Logged out successfully");
+    navigate("/login");
+  }
 
   return (
     <div
@@ -102,10 +110,11 @@ export default function AdminPage() {
             </nav>
 
             {/* Sidebar Footer */}
-            <div className="px-6 py-5" style={{ borderTop: "1px solid rgba(249,168,201,0.15)" }}>
-              <div className="flex items-center gap-3">
+            <div className="px-4 py-5" style={{ borderTop: "1px solid rgba(249,168,201,0.15)" }}>
+              {/* Admin Info */}
+              <div className="flex items-center gap-3 mb-4 px-2">
                 <div
-                  className="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold"
+                  className="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0"
                   style={{ background: "linear-gradient(135deg, #e879a0, #c4527a)" }}
                 >
                   A
@@ -115,6 +124,30 @@ export default function AdminPage() {
                   <p className="text-[10px]" style={{ color: "#f0c4d8" }}>Super Admin</p>
                 </div>
               </div>
+
+              {/* Logout Button */}
+              <button
+                onClick={handleLogout}
+                className="w-full py-2.5 rounded-xl text-xs font-semibold transition-all flex items-center justify-center gap-2"
+                style={{
+                  background: "rgba(232,121,160,0.12)",
+                  color: "#f9a8c9",
+                  border: "1px solid rgba(249,168,201,0.2)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "linear-gradient(135deg, #e879a0, #c4527a)";
+                  e.currentTarget.style.color = "#fff";
+                  e.currentTarget.style.border = "1px solid transparent";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "rgba(232,121,160,0.12)";
+                  e.currentTarget.style.color = "#f9a8c9";
+                  e.currentTarget.style.border = "1px solid rgba(249,168,201,0.2)";
+                }}
+              >
+                <HiOutlineLogout className="text-base" />
+                Logout
+              </button>
             </div>
           </div>
 
@@ -158,7 +191,6 @@ export default function AdminPage() {
                 }}
               >
                 <Routes>
-                  {/* ✅ Only ONE users route — pointing to AdminUsersPage */}
                   <Route path="users"       element={<AdminUsersPage />} />
                   <Route path="products"    element={<AdminProductPage />} />
                   <Route path="orders"      element={<AdminOrdersPage />} />

@@ -102,9 +102,7 @@ export default function ReviewsPage() {
                 {/* Stats */}
                 <div className="flex gap-10 mt-8">
                     {[
-                        { number: "4.9", label: "Average Rating" },
-                        { number: "10K+", label: "Happy Customers" },
-                        { number: "98%", label: "Recommend Us" },
+                        
                     ].map((stat) => (
                         <div key={stat.label} className="text-center">
                             <div className="text-2xl font-bold" style={{ color: "#f9a8c9" }}>{stat.number}</div>

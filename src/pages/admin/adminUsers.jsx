@@ -11,15 +11,17 @@ export default function AdminUsersPage() {
     const [search, setSearch] = useState("");
 
     const fetchUsers = useCallback(() => {
+        setLoading(true);
         const token = localStorage.getItem("token");
-        axios.get(import.meta.env.VITE_BACKEND_URL + "/api/user", {
+        axios.get(import.meta.env.VITE_BACKEND_URL + "/api/user/all", { // ✅ fixed URL
             headers: { Authorization: "Bearer " + token },
         })
         .then((res) => {
             setUsers(res.data);
             setLoading(false);
         })
-        .catch(() => {
+        .catch((err) => {
+            console.log("Error:", err.response?.status, err.response?.data);
             toast.error("Failed to load users");
             setLoading(false);
         });
@@ -56,7 +58,9 @@ export default function AdminUsersPage() {
     }
 
     const filtered = users.filter((u) =>
-        `${u.firstName} ${u.lastName} ${u.email}`.toLowerCase().includes(search.toLowerCase())
+        `${u.firstname} ${u.lastname} ${u.email}` // ✅ fixed casing
+            .toLowerCase()
+            .includes(search.toLowerCase())
     );
 
     const adminCount = users.filter((u) => u.role === "admin").length;
@@ -150,7 +154,7 @@ export default function AdminUsersPage() {
                     {/* Table Rows */}
                     {filtered.map((user, index) => (
                         <div
-                            key={user._id || user.userId}
+                            key={user._id}
                             className="grid grid-cols-12 px-5 py-4 items-center transition-all"
                             style={{
                                 background: index % 2 === 0 ? "#fff" : "#fdf6f9",
@@ -170,11 +174,11 @@ export default function AdminUsersPage() {
                                     className="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
                                     style={{ background: "linear-gradient(135deg, #e879a0, #c4527a)" }}
                                 >
-                                    {user.firstName?.charAt(0).toUpperCase() || "U"}
+                                    {user.firstname?.charAt(0).toUpperCase() || "U"} {/* ✅ fixed */}
                                 </div>
                                 <div>
                                     <p className="text-sm font-semibold" style={{ color: "#3d1a2e" }}>
-                                        {user.firstName} {user.lastName}
+                                        {user.firstname} {user.lastname} {/* ✅ fixed */}
                                     </p>
                                 </div>
                             </div>
@@ -188,7 +192,7 @@ export default function AdminUsersPage() {
                             <div className="col-span-2">
                                 <select
                                     value={user.role}
-                                    onChange={(e) => handleRoleChange(user._id || user.userId, e.target.value)}
+                                    onChange={(e) => handleRoleChange(user._id, e.target.value)}
                                     className="text-xs px-3 py-1.5 rounded-lg font-semibold outline-none cursor-pointer"
                                     style={{
                                         background: user.role === "admin"
@@ -199,14 +203,14 @@ export default function AdminUsersPage() {
                                     }}
                                 >
                                     <option value="admin">Admin</option>
-                                    <option value="customer">Customer</option>
+                                    <option value="user">User</option> {/* ✅ matches backend role "user" */}
                                 </select>
                             </div>
 
                             {/* Delete */}
                             <div className="col-span-1 flex justify-center">
                                 <button
-                                    onClick={() => handleDelete(user._id || user.userId)}
+                                    onClick={() => handleDelete(user._id)}
                                     className="w-8 h-8 rounded-lg flex items-center justify-center transition-all"
                                     style={{ color: "#e879a0", background: "#fdf0f5" }}
                                     onMouseEnter={(e) => {
