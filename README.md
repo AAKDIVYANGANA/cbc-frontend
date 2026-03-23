@@ -48,14 +48,15 @@ This repository contains the **frontend (React.js)** of the system.
 ### 🔐 Sign In (Google OAuth)
 ![Login](./screenshots/Signin.png)
 
-🔗 Backend Repository
+## 🔗 Backend Repository
 
 👉 https://github.com/AAKDIVYANGANA/cbc-backend
 
-🙌 About the Project
+---
 
-This project was developed to enhance my full-stack development skills using the MERN stack, focusing on building real-world e-commerce functionality including authentication, cart management, and checkout systems.
+## 🙌 About the Project
 
+This project was developed to enhance my full-stack development skills using the MERN stack, with a focus on building real-world e-commerce functionality such as authentication, shopping cart management, and a complete checkout system.
 ---
 
 
