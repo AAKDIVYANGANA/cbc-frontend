@@ -58,7 +58,7 @@ export default function UserData() {
             </div>
         ) : (
             <div className="h-full flex flex-row items-center gap-3">
-                {/* User avatar & name */}
+            
                 <div className="flex items-center gap-2">
                     <div
                         className="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold"
@@ -74,7 +74,7 @@ export default function UserData() {
                     </span>
                 </div>
 
-                {/* Logout Button */}
+                
                 <button
                     className="px-4 py-2 rounded-lg text-sm font-semibold transition-all"
                     style={{

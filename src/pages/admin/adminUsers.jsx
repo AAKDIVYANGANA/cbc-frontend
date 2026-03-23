@@ -13,7 +13,7 @@ export default function AdminUsersPage() {
     const fetchUsers = useCallback(() => {
         setLoading(true);
         const token = localStorage.getItem("token");
-        axios.get(import.meta.env.VITE_BACKEND_URL + "/api/user/all", { // ✅ fixed URL
+        axios.get(import.meta.env.VITE_BACKEND_URL + "/api/user/all", { 
             headers: { Authorization: "Bearer " + token },
         })
         .then((res) => {
@@ -58,7 +58,7 @@ export default function AdminUsersPage() {
     }
 
     const filtered = users.filter((u) =>
-        `${u.firstname} ${u.lastname} ${u.email}` // ✅ fixed casing
+        `${u.firstname} ${u.lastname} ${u.email}` 
             .toLowerCase()
             .includes(search.toLowerCase())
     );
@@ -69,7 +69,7 @@ export default function AdminUsersPage() {
     return (
         <div style={{ fontFamily: "'Georgia', serif" }}>
 
-            {/* Stats Row */}
+            
             <div className="grid grid-cols-3 gap-4 mb-6">
                 {[
                     { icon: <HiOutlineUsers className="text-2xl" />, label: "Total Users", value: users.length },
@@ -99,7 +99,7 @@ export default function AdminUsersPage() {
                 ))}
             </div>
 
-            {/* Search & Header */}
+            
             <div className="flex items-center justify-between mb-4 gap-4">
                 <h2 className="text-lg font-bold" style={{ color: "#1a0a0f" }}>All Users</h2>
                 <div
@@ -122,7 +122,7 @@ export default function AdminUsersPage() {
                 </div>
             </div>
 
-            {/* Table */}
+            
             {loading ? (
                 <div className="flex justify-center py-16">
                     <div className="w-10 h-10 border-4 rounded-full animate-spin"
@@ -139,7 +139,7 @@ export default function AdminUsersPage() {
                     className="rounded-2xl overflow-hidden"
                     style={{ border: "1px solid #f0c4d8" }}
                 >
-                    {/* Table Header */}
+                    
                     <div
                         className="grid grid-cols-12 px-5 py-3 text-xs font-bold uppercase tracking-widest"
                         style={{ background: "linear-gradient(135deg, #1a0a0f, #3d1a2e)", color: "#f9a8c9" }}
@@ -151,7 +151,7 @@ export default function AdminUsersPage() {
                         <div className="col-span-1 text-center">Action</div>
                     </div>
 
-                    {/* Table Rows */}
+                    
                     {filtered.map((user, index) => (
                         <div
                             key={user._id}
@@ -163,32 +163,32 @@ export default function AdminUsersPage() {
                             onMouseEnter={(e) => e.currentTarget.style.background = "#fce7f3"}
                             onMouseLeave={(e) => e.currentTarget.style.background = index % 2 === 0 ? "#fff" : "#fdf6f9"}
                         >
-                            {/* Index */}
+                        
                             <div className="col-span-1 text-xs" style={{ color: "#c4527a" }}>
                                 {index + 1}
                             </div>
 
-                            {/* Name + Avatar */}
+                            
                             <div className="col-span-4 flex items-center gap-3">
                                 <div
                                     className="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
                                     style={{ background: "linear-gradient(135deg, #e879a0, #c4527a)" }}
                                 >
-                                    {user.firstname?.charAt(0).toUpperCase() || "U"} {/* ✅ fixed */}
+                                    {user.firstname?.charAt(0).toUpperCase() || "U"} 
                                 </div>
                                 <div>
                                     <p className="text-sm font-semibold" style={{ color: "#3d1a2e" }}>
-                                        {user.firstname} {user.lastname} {/* ✅ fixed */}
+                                        {user.firstname} {user.lastname} 
                                     </p>
                                 </div>
                             </div>
 
-                            {/* Email */}
+                            
                             <div className="col-span-4 text-sm truncate" style={{ color: "#6b2d4a" }}>
                                 {user.email}
                             </div>
 
-                            {/* Role Toggle */}
+                            
                             <div className="col-span-2">
                                 <select
                                     value={user.role}
@@ -203,11 +203,11 @@ export default function AdminUsersPage() {
                                     }}
                                 >
                                     <option value="admin">Admin</option>
-                                    <option value="user">User</option> {/* ✅ matches backend role "user" */}
+                                    <option value="user">User</option> 
                                 </select>
                             </div>
 
-                            {/* Delete */}
+                            
                             <div className="col-span-1 flex justify-center">
                                 <button
                                     onClick={() => handleDelete(user._id)}

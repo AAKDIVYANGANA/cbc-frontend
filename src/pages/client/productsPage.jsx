@@ -25,12 +25,12 @@ export default function ProductsPage() {
     return (
         <div className="w-full min-h-full" style={{ background: "#fdf6f9", fontFamily: "'Georgia', serif" }}>
 
-            {/* PAGE HEADER */}
+            
             <div
                 className="w-full relative overflow-hidden py-14 px-6 flex flex-col items-center text-center"
                 style={{ background: "linear-gradient(135deg, #1a0a0f 0%, #3d1a2e 50%, #6b2d4a 100%)" }}
             >
-                {/* Decorative rings */}
+                
                 <div className="absolute top-[-40px] left-[-40px] w-[200px] h-[200px] rounded-full opacity-10 border border-pink-300" />
                 <div className="absolute bottom-[-30px] right-[-30px] w-[160px] h-[160px] rounded-full opacity-10 border border-pink-200" />
                 <div className="absolute top-[20%] right-[10%] w-[60px] h-[60px] rounded-full opacity-10 border border-pink-300" />
@@ -45,7 +45,7 @@ export default function ProductsPage() {
                     Discover premium beauty products crafted with natural ingredients for your radiant glow.
                 </p>
 
-                {/* Wave */}
+                
                 <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
                     <svg viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full h-[40px]">
                         <path d="M0,20 C360,40 1080,0 1440,20 L1440,40 L0,40 Z" fill="#fdf6f9" />
@@ -53,7 +53,7 @@ export default function ProductsPage() {
                 </div>
             </div>
 
-            {/* SEARCH BAR */}
+            
             <div
                 className="w-full py-6 px-6 sticky top-0 z-10"
                 style={{
@@ -110,7 +110,7 @@ export default function ProductsPage() {
 
         
 
-            {/* PRODUCTS GRID */}
+            
             <div className="max-w-6xl mx-auto px-6 py-6 pb-16">
                 {!productsLoaded ? (
                     <div className="flex justify-center py-24">

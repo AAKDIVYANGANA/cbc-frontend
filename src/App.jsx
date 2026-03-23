@@ -25,7 +25,7 @@ function App() {
           <Route path="/admin/*" element={<AdminPage />} />
           <Route path="/forgetPassword" element={<ForgetPassword/>} />
           <Route path="/r*" element={<ResponsiveTesting />} />
-          <Route path="/*" element={<HomePage />} /> {/* ✅ always last */}
+          <Route path="/*" element={<HomePage />} /> 
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/reviews/*" element={<ReviewsPage />} />
         </Routes>

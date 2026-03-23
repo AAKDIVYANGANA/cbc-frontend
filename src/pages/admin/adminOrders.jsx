@@ -38,7 +38,7 @@ export default function AdminOrdersPage() {
       )
       .then(() => {
         toast.success("Order status updated successfully");
-        setLoaded(false); // ✅ triggers reload
+        setLoaded(false); 
       })
       .catch(() => {
         toast.error("Failed to update order status");
@@ -75,7 +75,7 @@ export default function AdminOrdersPage() {
                   <td className="p-2">{order.address}</td>
                   <td className="p-2">{order.phoneNumber}</td>
 
-                  {/* STATUS DROPDOWN */}
+                  
                   <td className="p-2" onClick={(e) => e.stopPropagation()}>
                     <select
                       value={order.status}
@@ -85,22 +85,22 @@ export default function AdminOrdersPage() {
                         changeOrderStatus(order.orderId, e.target.value);
                       }}
                     >
-                      <option value="Pending">Pending</option>       {/* ✅ fixed: optipn -> option */}
+                      <option value="Pending">Pending</option>       
                       <option value="Processing">Processing</option>
                       <option value="Delivered">Delivered</option>
-                      <option value="Cancelled">Cancelled</option>   {/* ✅ fixed: wrong value */}
+                      <option value="Cancelled">Cancelled</option>   
                     </select>
                   </td>
 
                   <td className="p-2">{order.total.toFixed(2)}</td>
                   <td className="p-2">{new Date(order.date).toDateString()}</td>
 
-                  {/* DETAILS BUTTON */}
+                  
                   <td className="p-2">
                     <button
                       className="bg-gray-700 text-white px-3 py-1 rounded-lg text-sm hover:bg-gray-900"
                       onClick={(e) => {
-                        e.stopPropagation(); // ✅ prevent row click
+                        e.stopPropagation(); 
                         setDisplayingOrder(order);
                         setModalIsDisplaying(true);
                       }}
@@ -113,12 +113,12 @@ export default function AdminOrdersPage() {
             </tbody>
           </table>
 
-          {/* MODAL */}
+          
           {modalIsDisplaying && displayingOrder && (
             <div className="fixed bg-[#00000070] w-full h-full top-0 left-0 flex justify-center items-center z-50">
               <div className="w-[600px] max-h-[600px] bg-white relative flex flex-col rounded-md shadow-lg">
 
-                {/* CLOSE BUTTON */}
+                
                 <button
                   className="w-[40px] h-[40px] rounded-full bg-white shadow shadow-black flex justify-center items-center absolute right-[-15px] top-[-15px] z-10"
                   onClick={() => setModalIsDisplaying(false)}
@@ -126,7 +126,7 @@ export default function AdminOrdersPage() {
                   <IoCloseSharp />
                 </button>
 
-                {/* ORDER INFO */}
+              
                 <div className="p-4 border-b border-gray-200">
                   <h1 className="text-sm font-bold">Order ID: {displayingOrder.orderId}</h1>
                   <h1 className="text-sm font-bold">Order Date: {new Date(displayingOrder.date).toDateString()}</h1>
@@ -134,7 +134,7 @@ export default function AdminOrdersPage() {
                   <h1 className="text-sm font-bold">Order Total: {displayingOrder.total.toFixed(2)}</h1>
                 </div>
 
-                {/* BILL ITEMS */}
+                
                 <div className="w-full overflow-y-auto flex-1 p-4">
                   {displayingOrder.billItems.map((item, index) => (
                     <div key={index} className="flex items-center gap-4 mb-4 border-b pb-3">

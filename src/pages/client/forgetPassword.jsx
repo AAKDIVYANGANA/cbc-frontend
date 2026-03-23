@@ -37,7 +37,7 @@ export default function ForgetPassword() {
             className="w-full h-screen flex overflow-hidden"
             style={{ fontFamily: "'Georgia', serif" }}
         >
-            {/* LEFT PANEL */}
+            
             <div
                 className="hidden lg:flex w-[55%] h-full flex-col items-center justify-center relative"
                 style={{
@@ -74,14 +74,14 @@ export default function ForgetPassword() {
                 </div>
             </div>
 
-            {/* RIGHT PANEL */}
+            
             <div
                 className="w-full lg:w-[45%] h-full flex items-center justify-center px-8"
                 style={{ background: "#fdf6f9" }}
             >
                 <div className="w-full max-w-[400px]">
 
-                    {/* Step indicator */}
+                
                     <div className="flex items-center gap-2 mb-8">
                         {["Email", "Reset", "Done"].map((step, i) => {
                             const stepKeys = ["email-input", "reset-input", "success"];
@@ -116,7 +116,7 @@ export default function ForgetPassword() {
                         })}
                     </div>
 
-                    {/* Error */}
+                
                     {error && (
                         <div
                             className="mb-5 px-4 py-3 rounded-xl text-sm"
@@ -126,7 +126,7 @@ export default function ForgetPassword() {
                         </div>
                     )}
 
-                    {/* STEP 1 — Email */}
+                    
                     {status === "email-input" && (
                         <>
                             <div className="mb-8">
@@ -176,7 +176,7 @@ export default function ForgetPassword() {
                         </>
                     )}
 
-                    {/* STEP 2 — OTP + New Password */}
+                    
                     {status === "reset-input" && (
                         <>
                             <div className="mb-8">
@@ -237,7 +237,7 @@ export default function ForgetPassword() {
                         </>
                     )}
 
-                    {/* STEP 3 — Success */}
+                    
                     {status === "success" && (
                         <div className="text-center">
                             <div

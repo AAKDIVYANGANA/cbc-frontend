@@ -60,14 +60,14 @@ export default function LoginPage() {
 
     return (
         <div className="w-full h-screen flex overflow-hidden" style={{ fontFamily: "'Georgia', serif" }}>
-            {/* Left Panel */}
+            
             <div
                 className="hidden lg:flex w-[55%] h-full relative flex-col items-center justify-center"
                 style={{
                     background: "linear-gradient(135deg, #1a0a0f 0%, #3d1a2e 40%, #6b2d4a 70%, #c4527a 100%)",
                 }}
             >
-                {/* Decorative circles */}
+                
                 <div className="absolute top-[-80px] left-[-80px] w-[300px] h-[300px] rounded-full opacity-20"
                     style={{ background: "radial-gradient(circle, #f9a8c9, transparent)" }} />
                 <div className="absolute bottom-[-60px] right-[-60px] w-[250px] h-[250px] rounded-full opacity-15"
@@ -95,20 +95,20 @@ export default function LoginPage() {
                 </div>
             </div>
 
-            {/* Right Panel */}
+        
             <div
                 className="w-full lg:w-[45%] h-full flex items-center justify-center px-8"
                 style={{ background: "#fdf6f9" }}
             >
                 <div className="w-full max-w-[400px]">
-                    {/* Header */}
+                    
                     <div className="mb-10">
                         <p className="text-pink-400 text-sm tracking-widest uppercase mb-2">Welcome back</p>
                         <h2 className="text-4xl font-bold text-gray-800">Sign In</h2>
                         <div className="mt-3 w-12 h-1 rounded-full" style={{ background: "linear-gradient(to right, #e879a0, #f9a8c9)" }} />
                     </div>
 
-                    {/* Inputs */}
+                    
                     <div className="space-y-4 mb-6">
                         <div>
                             <label className="text-xs text-gray-500 uppercase tracking-widest mb-1 block">Email Address</label>
@@ -146,14 +146,14 @@ export default function LoginPage() {
                         </div>
                     </div>
 
-                    {/* Forgot password */}
+                
                     <div className="text-right mb-6">
                         <Link to="/forgetPassword" className="text-sm text-pink-400 hover:text-pink-600 transition-colors">
                             Forgot password?
                         </Link>
                     </div>
 
-                    {/* Login Button */}
+                    
                     <button
                         onClick={handleLogin}
                         disabled={loading}
@@ -166,14 +166,14 @@ export default function LoginPage() {
                         {loading ? "Signing in..." : "Sign In"}
                     </button>
 
-                    {/* Divider */}
+                
                     <div className="flex items-center gap-3 my-4">
                         <div className="flex-1 h-px bg-pink-100" />
                         <span className="text-xs text-gray-400">or continue with</span>
                         <div className="flex-1 h-px bg-pink-100" />
                     </div>
 
-                    {/* Google Button */}
+                    
                     <button
                         onClick={() => loginWithGoogle()}
                         disabled={loading}
@@ -189,7 +189,7 @@ export default function LoginPage() {
                         {loading ? "Loading..." : "Sign in with Google"}
                     </button>
 
-                    {/* Register */}
+        
                     <p className="text-center text-sm text-gray-500 mt-8">
                         Don't have an account?{" "}
                         <Link to="/register" className="text-pink-500 font-semibold hover:text-pink-700 transition-colors">

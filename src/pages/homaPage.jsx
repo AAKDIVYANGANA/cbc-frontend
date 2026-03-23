@@ -21,12 +21,12 @@ function LandingPage() {
     return (
         <div className="w-full overflow-y-auto h-full" style={{ fontFamily: "'Georgia', serif" }}>
 
-            {/* HERO SECTION */}
+            
             <div
                 className="w-full relative overflow-hidden flex flex-col items-center text-center justify-center min-h-[620px] px-6"
                 style={{ background: "linear-gradient(135deg, #1a0a0f 0%, #3d1a2e 45%, #6b2d4a 75%, #c4527a 100%)" }}
             >
-                {/* Decorative blobs */}
+            
                 <div className="absolute top-[-60px] left-[-60px] w-[320px] h-[320px] rounded-full opacity-20"
                     style={{ background: "radial-gradient(circle, #f9a8c9, transparent)" }} />
                 <div className="absolute bottom-[-40px] right-[-40px] w-[280px] h-[280px] rounded-full opacity-15"
@@ -35,7 +35,7 @@ function LandingPage() {
                 <div className="absolute top-[15%] right-[12%] w-[70px] h-[70px] rounded-full opacity-10 border border-pink-200" />
                 <div className="absolute bottom-[20%] left-[20%] w-[50px] h-[50px] rounded-full opacity-10 border border-pink-300" />
 
-                {/* Floating sparkles */}
+            
                 {["top-[12%] left-[25%]", "top-[60%] right-[20%]", "bottom-[25%] right-[35%]", "top-[35%] left-[5%]"].map((pos, i) => (
                     <span key={i} className={`absolute ${pos} text-pink-300 opacity-30 text-xl`}
                         style={{ animation: `bounce ${2.5 + i * 0.5}s infinite` }}>✦</span>
@@ -68,7 +68,7 @@ function LandingPage() {
                     </button>
                 </div>
 
-                {/* Wave bottom */}
+            
                 <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
                     <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full h-[60px]">
                         <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#fdf6f9" />
@@ -76,7 +76,7 @@ function LandingPage() {
                 </div>
             </div>
 
-            {/* FEATURES STRIP */}
+        
             <div className="w-full py-12 px-6" style={{ background: "#fdf6f9" }}>
                 <div className="max-w-4xl mx-auto grid grid-cols-3 gap-6 text-center">
                     {[
@@ -95,7 +95,7 @@ function LandingPage() {
                 </div>
             </div>
 
-            {/* FEATURED PRODUCTS */}
+            
             <div className="w-full py-16 px-6" style={{ background: "#fff" }}>
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-12">
@@ -166,7 +166,7 @@ function LandingPage() {
                 </div>
             </div>
 
-            {/* WHY US STRIP */}
+        
             <div
                 className="w-full py-20 px-6 text-center relative overflow-hidden"
                 style={{ background: "linear-gradient(135deg, #1a0a0f 0%, #3d1a2e 50%, #6b2d4a 100%)" }}
@@ -200,7 +200,7 @@ function LandingPage() {
                 </div>
             </div>
 
-            {/* FOOTER */}
+            
             <div className="w-full py-8 px-6 text-center" style={{ background: "#0f0508" }}>
                 <div className="text-2xl mb-3">🌸</div>
                 <p className="font-bold mb-1" style={{ color: "#f9a8c9", fontFamily: "'Georgia', serif" }}>

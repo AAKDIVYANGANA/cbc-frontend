@@ -7,7 +7,7 @@ export default function ImageSlider({ images = [] }) {
 
   return (
     <div className="w-full flex flex-col items-center">
-      {/* MAIN LARGE IMAGE */}
+      
       <div className="w-full aspect-square overflow-hidden mb-2">
         <img
           src={activeImage}
@@ -16,7 +16,7 @@ export default function ImageSlider({ images = [] }) {
         />
       </div>
 
-      {/* THUMBNAILS - Centered and smaller */}
+    
       <div className="flex justify-center items-center gap-1 w-full overflow-x-auto py-1">
         {images.map((img, idx) => (
           <div

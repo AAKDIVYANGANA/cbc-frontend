@@ -64,7 +64,7 @@ export default function AdminPage() {
     >
       {userValidated ? (
         <>
-          {/* SIDEBAR */}
+          
           <div
             className="h-full w-[220px] flex flex-col flex-shrink-0"
             style={{
@@ -72,7 +72,7 @@ export default function AdminPage() {
               boxShadow: "4px 0 24px rgba(26,10,15,0.3)",
             }}
           >
-            {/* Logo */}
+        
             <div className="px-6 py-6" style={{ borderBottom: "1px solid rgba(249,168,201,0.15)" }}>
               <div className="text-lg font-bold" style={{ color: "#f9a8c9" }}>Crystal Beauty</div>
               <div className="text-xs font-semibold text-white">Admin Panel</div>
@@ -80,7 +80,7 @@ export default function AdminPage() {
                 style={{ background: "linear-gradient(to right, #f9a8c9, #e879a0)" }} />
             </div>
 
-            {/* Nav Links */}
+        
             <nav className="flex flex-col gap-2 px-3 py-6 flex-1">
               {navLinks.map((link) => (
                 <Link
@@ -109,9 +109,9 @@ export default function AdminPage() {
               ))}
             </nav>
 
-            {/* Sidebar Footer */}
+            
             <div className="px-4 py-5" style={{ borderTop: "1px solid rgba(249,168,201,0.15)" }}>
-              {/* Admin Info */}
+          
               <div className="flex items-center gap-3 mb-4 px-2">
                 <div
                   className="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0"
@@ -125,7 +125,7 @@ export default function AdminPage() {
                 </div>
               </div>
 
-              {/* Logout Button */}
+          
               <button
                 onClick={handleLogout}
                 className="w-full py-2.5 rounded-xl text-xs font-semibold transition-all flex items-center justify-center gap-2"
@@ -151,10 +151,10 @@ export default function AdminPage() {
             </div>
           </div>
 
-          {/* MAIN CONTENT */}
+        
           <div className="flex-1 h-full flex flex-col overflow-hidden">
 
-            {/* Top bar */}
+      
             <div
               className="w-full px-8 py-4 flex items-center justify-between flex-shrink-0"
               style={{
@@ -180,7 +180,7 @@ export default function AdminPage() {
               </div>
             </div>
 
-            {/* Page Content */}
+            
             <div className="flex-1 overflow-y-auto p-6">
               <div
                 className="w-full min-h-full rounded-2xl p-6"

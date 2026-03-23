@@ -79,7 +79,7 @@ export default function ReviewsPage() {
     return (
         <div className="w-full min-h-screen" style={{ background: "#fdf6f9", fontFamily: "'Georgia', serif" }}>
 
-            {/* HERO BANNER */}
+            
             <div
                 className="w-full relative overflow-hidden py-14 px-6 flex flex-col items-center text-center"
                 style={{ background: "linear-gradient(135deg, #1a0a0f 0%, #3d1a2e 50%, #6b2d4a 100%)" }}
@@ -99,7 +99,7 @@ export default function ReviewsPage() {
                     Real experiences from our beautiful community of skincare lovers.
                 </p>
 
-                {/* Stats */}
+                
                 <div className="flex gap-10 mt-8">
                     {[
                         
@@ -111,7 +111,7 @@ export default function ReviewsPage() {
                     ))}
                 </div>
 
-                {/* Wave */}
+                
                 <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
                     <svg viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full h-[40px]">
                         <path d="M0,20 C360,40 1080,0 1440,20 L1440,40 L0,40 Z" fill="#fdf6f9" />
@@ -119,7 +119,7 @@ export default function ReviewsPage() {
                 </div>
             </div>
 
-            {/* REVIEWS GRID */}
+            
             <div className="max-w-6xl mx-auto px-6 py-14">
                 <div className="text-center mb-10">
                     <span className="text-xs font-bold tracking-widest uppercase block mb-2" style={{ color: "#e879a0" }}>
@@ -143,22 +143,22 @@ export default function ReviewsPage() {
                             onMouseEnter={(e) => e.currentTarget.style.boxShadow = "0 12px 36px rgba(232,121,160,0.2)"}
                             onMouseLeave={(e) => e.currentTarget.style.boxShadow = "0 4px 16px rgba(232,121,160,0.08)"}
                         >
-                            {/* Stars */}
+                            
                             <div className="flex gap-1 mb-4">
                                 {[1, 2, 3, 4, 5].map((s) => (
                                     <StarIcon key={s} filled={s <= review.rating} />
                                 ))}
                             </div>
 
-                            {/* Comment */}
+                        
                             <p className="text-sm leading-relaxed mb-5" style={{ color: "#6b2d4a" }}>
                                 "{review.comment}"
                             </p>
 
-                            {/* Divider */}
+                        
                             <div className="h-[1px] mb-4" style={{ background: "#f0c4d8" }} />
 
-                            {/* Author */}
+                            
                             <div className="flex items-center gap-3">
                                 <div
                                     className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0"
@@ -176,7 +176,7 @@ export default function ReviewsPage() {
                 </div>
             </div>
 
-            {/* WRITE A REVIEW FORM */}
+            
             <div className="w-full py-16 px-6"
                 style={{ background: "linear-gradient(135deg, #1a0a0f 0%, #3d1a2e 50%, #6b2d4a 100%)" }}>
                 <div className="max-w-xl mx-auto">
@@ -196,7 +196,7 @@ export default function ReviewsPage() {
                         <div className="px-8 py-8" style={{ background: "#fdf6f9" }}>
                             {!submitted ? (
                                 <>
-                                    {/* Name */}
+                            
                                     <label className="text-xs uppercase tracking-widest mb-1 block" style={{ color: "#6b2d4a" }}>
                                         Your Name
                                     </label>
@@ -211,7 +211,7 @@ export default function ReviewsPage() {
                                         onBlur={(e) => (e.target.style.borderColor = "#f0c4d8")}
                                     />
 
-                                    {/* Star Rating */}
+                                    
                                     <label className="text-xs uppercase tracking-widest mb-2 block" style={{ color: "#6b2d4a" }}>
                                         Rating
                                     </label>
@@ -230,7 +230,7 @@ export default function ReviewsPage() {
                                         ))}
                                     </div>
 
-                                    {/* Comment */}
+                                    
                                     <label className="text-xs uppercase tracking-widest mb-1 block" style={{ color: "#6b2d4a" }}>
                                         Your Review
                                     </label>
@@ -289,7 +289,7 @@ export default function ReviewsPage() {
                 </div>
             </div>
 
-            {/* FOOTER */}
+        
             <div className="w-full py-8 px-6 text-center" style={{ background: "#0f0508" }}>
                 <div className="text-2xl mb-3">🌸</div>
                 <p className="font-bold mb-1" style={{ color: "#f9a8c9" }}>Crystal Beauty Clear</p>

@@ -72,10 +72,10 @@ export default function ProductOverview() {
   return (
     <div className="w-full min-h-screen" style={{ background: "#fdf6f9", fontFamily: "'Georgia', serif" }}>
 
-      {/* ======== MOBILE LAYOUT ======== */}
+      
       <div className="flex flex-col md:hidden px-4 py-8">
 
-        {/* Breadcrumb */}
+        
         <p className="text-xs mb-4" style={{ color: "#c4527a" }}>
           <span className="cursor-pointer hover:underline" onClick={() => navigate("/")}>Home</span>
           {" / "}
@@ -84,19 +84,19 @@ export default function ProductOverview() {
           <span style={{ color: "#3d1a2e" }}>{product.name}</span>
         </p>
 
-        {/* Image */}
+      
         <div className="w-full rounded-2xl overflow-hidden mb-6"
           style={{ border: "1px solid #f0c4d8" }}>
           <ImageSlider images={product.images} />
         </div>
 
-        {/* Name */}
+        
         <h1 className="text-2xl font-bold mb-1" style={{ color: "#1a0a0f" }}>{product.name}</h1>
         {product.altNames?.length > 0 && (
           <p className="text-sm mb-4" style={{ color: "#c4527a" }}>{product.altNames.join(" | ")}</p>
         )}
 
-        {/* Price */}
+        
         <div className="flex items-center gap-3 mb-4">
           <span className="text-2xl font-bold" style={{ color: "#e879a0" }}>
             LKR {product.price.toFixed(2)}
@@ -130,10 +130,10 @@ export default function ProductOverview() {
         </div>
       </div>
 
-      {/* ======== DESKTOP LAYOUT ======== */}
+      
       <div className="hidden md:flex w-full max-w-[1100px] mx-auto px-10 py-14 gap-14 items-start">
 
-        {/* LEFT — Image Slider */}
+        
         <div className="w-[480px] flex-shrink-0">
           <div className="rounded-3xl overflow-hidden"
             style={{ border: "1px solid #f0c4d8", boxShadow: "0 8px 40px rgba(232,121,160,0.12)" }}>
@@ -141,10 +141,10 @@ export default function ProductOverview() {
           </div>
         </div>
 
-        {/* RIGHT — Details */}
+        
         <div className="flex-1 flex flex-col">
 
-          {/* Breadcrumb */}
+          
           <p className="text-xs mb-5" style={{ color: "#c4527a" }}>
             <span className="cursor-pointer hover:underline" onClick={() => navigate("/")}>Home</span>
             {" / "}
@@ -153,7 +153,7 @@ export default function ProductOverview() {
             <span style={{ color: "#3d1a2e" }}>{product.name}</span>
           </p>
 
-          {/* Name */}
+          
           <h1 className="text-4xl font-bold mb-2 leading-tight" style={{ color: "#1a0a0f" }}>
             {product.name}
           </h1>
@@ -166,7 +166,7 @@ export default function ProductOverview() {
           <div className="w-12 h-[2px] rounded-full mb-6"
             style={{ background: "linear-gradient(to right, #e879a0, #f9a8c9)" }} />
 
-          {/* Price */}
+          
           <div className="flex items-center gap-4 mb-6">
             <span className="text-3xl font-bold" style={{ color: "#e879a0" }}>
               LKR {product.price.toFixed(2)}
@@ -184,7 +184,7 @@ export default function ProductOverview() {
             )}
           </div>
 
-          {/* Description */}
+          
           <div
             className="rounded-2xl p-5 mb-8"
             style={{ background: "#fff", border: "1px solid #f0c4d8" }}
@@ -197,7 +197,7 @@ export default function ProductOverview() {
             </p>
           </div>
 
-          {/* Features badges */}
+          
           <div className="flex gap-3 mb-8">
             {["🌿 Natural", "✨ Premium", "💎 Cruelty Free"].map((tag) => (
               <span key={tag}
@@ -208,7 +208,7 @@ export default function ProductOverview() {
             ))}
           </div>
 
-          {/* Action Buttons */}
+          
           <div className="flex gap-4">
             <button
               className="flex-1 py-3.5 rounded-xl font-semibold text-sm transition-all"

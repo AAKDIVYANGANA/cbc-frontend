@@ -31,7 +31,7 @@ export default function CartPage() {
       className="w-full min-h-screen py-10 px-4"
       style={{ background: "#fdf6f9", fontFamily: "'Georgia', serif" }}
     >
-      {/* Header */}
+      
       <div className="max-w-5xl mx-auto mb-8">
         <p className="text-xs font-semibold tracking-widest uppercase mb-1"
           style={{ color: "#e879a0" }}>
@@ -44,7 +44,7 @@ export default function CartPage() {
 
       <div className="max-w-5xl mx-auto flex flex-col lg:flex-row gap-6">
 
-        {/* LEFT — Cart Items */}
+        
         <div className="flex-1">
           {cart.length === 0 ? (
             <div
@@ -81,7 +81,7 @@ export default function CartPage() {
               className="rounded-2xl overflow-hidden"
               style={{ border: "1px solid #f0c4d8", boxShadow: "0 4px 16px rgba(232,121,160,0.08)" }}
             >
-              {/* Table Header */}
+              
               <div
                 className="px-6 py-3 text-xs font-bold uppercase tracking-widest grid grid-cols-12"
                 style={{ background: "linear-gradient(135deg, #1a0a0f, #3d1a2e)", color: "#f9a8c9" }}
@@ -92,7 +92,7 @@ export default function CartPage() {
                 <div className="col-span-1" />
               </div>
 
-              {/* Cart Rows */}
+              
               {cart.map((item, index) => {
                 const itemTotal = item.price * item.quantity;
                 return (
@@ -106,7 +106,7 @@ export default function CartPage() {
                     onMouseEnter={(e) => e.currentTarget.style.background = "#fce7f3"}
                     onMouseLeave={(e) => e.currentTarget.style.background = index % 2 === 0 ? "#fff" : "#fdf6f9"}
                   >
-                    {/* Product Info */}
+                    
                     <div className="col-span-5 flex items-center gap-3">
                       <div
                         className="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0"
@@ -128,7 +128,7 @@ export default function CartPage() {
                       </div>
                     </div>
 
-                    {/* Quantity */}
+                  
                     <div className="col-span-3 flex items-center justify-center gap-2">
                       <button
                         className="w-7 h-7 rounded-lg flex items-center justify-center text-sm font-bold text-white transition-all"
@@ -149,12 +149,12 @@ export default function CartPage() {
                       >+</button>
                     </div>
 
-                    {/* Subtotal */}
+                  
                     <div className="col-span-3 text-right text-sm font-bold" style={{ color: "#3d1a2e" }}>
                       LKR {itemTotal.toFixed(2)}
                     </div>
 
-                    {/* Remove */}
+                  
                     <div className="col-span-1 flex justify-end">
                       <button
                         onClick={() => handleRemove(item.productId)}
@@ -179,7 +179,7 @@ export default function CartPage() {
           )}
         </div>
 
-        {/* RIGHT — Order Summary */}
+        
         {cart.length > 0 && (
           <div className="w-full lg:w-[300px]">
             <div
@@ -194,7 +194,7 @@ export default function CartPage() {
                 Order Summary
               </h2>
 
-              {/* Item count */}
+              
               <div className="flex justify-between text-xs mb-4" style={{ color: "#c4527a" }}>
                 <span>{cart.length} item{cart.length !== 1 ? "s" : ""} in cart</span>
                 <span>{cart.reduce((s, i) => s + i.quantity, 0)} units</span>

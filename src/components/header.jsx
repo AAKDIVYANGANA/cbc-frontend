@@ -28,7 +28,7 @@ export default function Header() {
           fontFamily: "'Georgia', serif",
         }}
       >
-        {/* LOGO */}
+        
         <Link to="/" className="flex items-center gap-1">
           <span className="text-xl font-bold" style={{ color: "#f9a8c9" }}>
             Crystal Beauty
@@ -36,7 +36,7 @@ export default function Header() {
           <span className="text-xl font-bold text-white"> Clear</span>
         </Link>
 
-        {/* DESKTOP NAV */}
+        
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
@@ -61,11 +61,11 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* RIGHT SIDE */}
+        
         <div className="flex items-center gap-4">
           <UserData />
 
-          {/* Cart */}
+        
           <Link
             to="/cart"
             className="relative flex items-center justify-center w-9 h-9 rounded-xl transition-all"
@@ -80,7 +80,7 @@ export default function Header() {
             <BsCart4 className="text-2xl" />
           </Link>
 
-          {/* Mobile Menu Button */}
+        
           <button
             className="lg:hidden flex items-center justify-center w-9 h-9 rounded-xl transition-all"
             style={{ color: "#f9a8c9" }}
@@ -97,14 +97,14 @@ export default function Header() {
         </div>
       </header>
 
-      {/* MOBILE SIDEBAR OVERLAY */}
+      
       {isOpen && (
         <div
           className="fixed inset-0 z-[9999] flex"
           style={{ background: "rgba(26,10,15,0.7)", backdropFilter: "blur(6px)" }}
           onClick={() => setIsOpen(false)}
         >
-          {/* SIDEBAR PANEL */}
+          
           <div
             className="w-[290px] h-full flex flex-col"
             style={{
@@ -114,7 +114,7 @@ export default function Header() {
             }}
             onClick={(e) => e.stopPropagation()}
           >
-            {/* SIDEBAR HEADER */}
+            
             <div
               className="flex items-center justify-between px-6 py-5"
               style={{ borderBottom: "1px solid rgba(249,168,201,0.15)" }}
@@ -134,11 +134,11 @@ export default function Header() {
               </button>
             </div>
 
-            {/* Decorative line */}
+            
             <div className="mx-6 mt-1 h-[1px] rounded-full opacity-30"
               style={{ background: "linear-gradient(to right, #e879a0, transparent)" }} />
 
-            {/* SIDEBAR LINKS */}
+            
             <nav className="flex flex-col px-4 py-8 gap-2">
               {navLinks.map((link) => (
                 <Link
@@ -161,7 +161,7 @@ export default function Header() {
               ))}
             </nav>
 
-            {/* SIDEBAR FOOTER */}
+            
             <div className="mt-auto px-6 py-6"
               style={{ borderTop: "1px solid rgba(249,168,201,0.15)" }}>
               <div className="text-center">

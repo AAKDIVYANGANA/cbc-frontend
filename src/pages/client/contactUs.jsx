@@ -21,7 +21,7 @@ export default function ContactUs() {
             className="min-h-screen w-full flex items-center justify-center px-4 py-12 relative overflow-hidden"
             style={{ background: "linear-gradient(135deg, #1a0a0f 0%, #3d1a2e 50%, #6b2d4a 100%)", fontFamily: "'Georgia', serif" }}
         >
-            {/* Decorative blobs */}
+            
             <div className="absolute top-[-60px] left-[-60px] w-[280px] h-[280px] rounded-full opacity-15"
                 style={{ background: "radial-gradient(circle, #f9a8c9, transparent)" }} />
             <div className="absolute bottom-[-40px] right-[-40px] w-[220px] h-[220px] rounded-full opacity-10"
@@ -33,12 +33,12 @@ export default function ContactUs() {
 
             <div className="w-full max-w-[480px] relative z-10">
 
-                {/* Card */}
+            
                 <div
                     className="rounded-3xl overflow-hidden"
                     style={{ boxShadow: "0 24px 60px rgba(26,10,15,0.5)" }}
                 >
-                    {/* Card top strip */}
+                    
                     <div
                         className="px-10 py-8 text-center"
                         style={{ background: "rgba(255,255,255,0.04)", borderBottom: "1px solid rgba(249,168,201,0.15)" }}
@@ -49,7 +49,7 @@ export default function ContactUs() {
                             style={{ background: "linear-gradient(to right, #f9a8c9, #e879a0)" }} />
                     </div>
 
-                    {/* Card body */}
+                    
                     <div className="px-10 py-8" style={{ background: "#fdf6f9" }}>
                         {!submitted ? (
                             <>
@@ -129,7 +129,7 @@ export default function ContactUs() {
                     </div>
                 </div>
 
-                {/* Bottom tagline */}
+                
                 <p className="text-center text-xs mt-6" style={{ color: "rgba(240,196,216,0.4)" }}>
                     © 2024 Crystal Beauty Clear
                 </p>

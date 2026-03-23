@@ -54,14 +54,14 @@ export default function RegisterPage() {
     return (
         <div className="w-full min-h-screen flex overflow-hidden" style={{ fontFamily: "'Georgia', serif" }}>
 
-            {/* Left Panel */}
+            
             <div
                 className="hidden lg:flex w-[55%] h-screen sticky top-0 flex-col items-center justify-center"
                 style={{
                     background: "linear-gradient(135deg, #1a0a0f 0%, #3d1a2e 40%, #6b2d4a 70%, #c4527a 100%)",
                 }}
             >
-                {/* Decorative circles */}
+                
                 <div className="absolute top-[-80px] left-[-80px] w-[300px] h-[300px] rounded-full opacity-20"
                     style={{ background: "radial-gradient(circle, #f9a8c9, transparent)" }} />
                 <div className="absolute bottom-[-60px] right-[-60px] w-[250px] h-[250px] rounded-full opacity-15"
@@ -89,21 +89,21 @@ export default function RegisterPage() {
                 </div>
             </div>
 
-            {/* Right Panel */}
+            
             <div
                 className="w-full lg:w-[45%] min-h-screen flex items-center justify-center px-8 py-12"
                 style={{ background: "#fdf6f9" }}
             >
                 <div className="w-full max-w-[400px]">
 
-                    {/* Header */}
+                    
                     <div className="mb-8">
                         <p className="text-pink-400 text-sm tracking-widest uppercase mb-2">Get started</p>
                         <h2 className="text-4xl font-bold text-gray-800">Create Account</h2>
                         <div className="mt-3 w-12 h-1 rounded-full" style={{ background: "linear-gradient(to right, #e879a0, #f9a8c9)" }} />
                     </div>
 
-                    {/* Name Row */}
+                    
                     <div className="flex gap-3 mb-4">
                         <div className="flex-1">
                             <label className="text-xs text-gray-500 uppercase tracking-widest mb-1 block">First Name</label>
@@ -133,7 +133,7 @@ export default function RegisterPage() {
                         </div>
                     </div>
 
-                    {/* Email */}
+            
                     <div className="mb-4">
                         <label className="text-xs text-gray-500 uppercase tracking-widest mb-1 block">Email Address</label>
                         <input
@@ -148,7 +148,7 @@ export default function RegisterPage() {
                         />
                     </div>
 
-                    {/* Password */}
+            
                     <div className="mb-4">
                         <label className="text-xs text-gray-500 uppercase tracking-widest mb-1 block">Password</label>
                         <input
@@ -163,7 +163,7 @@ export default function RegisterPage() {
                         />
                     </div>
 
-                    {/* Confirm Password */}
+                    
                     <div className="mb-8">
                         <label className="text-xs text-gray-500 uppercase tracking-widest mb-1 block">Confirm Password</label>
                         <input
@@ -178,7 +178,7 @@ export default function RegisterPage() {
                         />
                     </div>
 
-                    {/* Register Button */}
+                    
                     <button
                         onClick={handleRegister}
                         disabled={loading}
@@ -191,7 +191,7 @@ export default function RegisterPage() {
                         {loading ? "Creating Account..." : "Create Account"}
                     </button>
 
-                    {/* Login Link */}
+            
                     <p className="text-center text-sm text-gray-500 mt-6">
                         Already have an account?{" "}
                         <Link to="/login" className="text-pink-500 font-semibold hover:text-pink-700 transition-colors">

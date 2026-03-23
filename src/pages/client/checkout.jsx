@@ -80,7 +80,7 @@ export default function CheckoutPage() {
       className="w-full min-h-screen py-10 px-4"
       style={{ background: "#fdf6f9", fontFamily: "'Georgia', serif" }}
     >
-      {/* Header */}
+      
       <div className="max-w-5xl mx-auto mb-8">
         <p className="text-xs font-semibold tracking-widest uppercase mb-1" style={{ color: "#e879a0" }}>
           ✦ &nbsp; Review your order
@@ -92,7 +92,7 @@ export default function CheckoutPage() {
 
       <div className="max-w-5xl mx-auto flex flex-col lg:flex-row gap-6">
 
-        {/* LEFT — Cart Items */}
+        
         <div className="flex-1">
           {cart.length === 0 ? (
             <div
@@ -115,7 +115,7 @@ export default function CheckoutPage() {
               className="rounded-2xl overflow-hidden"
               style={{ border: "1px solid #f0c4d8", boxShadow: "0 4px 16px rgba(232,121,160,0.08)" }}
             >
-              {/* Table Header */}
+              
               <div
                 className="px-6 py-3 text-xs font-bold uppercase tracking-widest grid grid-cols-12"
                 style={{ background: "linear-gradient(135deg, #1a0a0f, #3d1a2e)", color: "#f9a8c9" }}
@@ -126,7 +126,7 @@ export default function CheckoutPage() {
                 <div className="col-span-1" />
               </div>
 
-              {/* Cart Items */}
+              
               {cart.map((item, index) => {
                 const itemTotal = item.price * item.quantity;
                 return (
@@ -140,19 +140,19 @@ export default function CheckoutPage() {
                     onMouseEnter={(e) => e.currentTarget.style.background = "#fce7f3"}
                     onMouseLeave={(e) => e.currentTarget.style.background = index % 2 === 0 ? "#fff" : "#fdf6f9"}
                   >
-                    {/* Product Info */}
+                    
 <div className="col-span-5 flex items-center gap-3">
   <div
     className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0"
-    style={{ border: "1px solid #f0c4d8", minWidth: "64px" }}  // ✅ added minWidth
+    style={{ border: "1px solid #f0c4d8", minWidth: "64px" }}  
   >
     <img
-      src={item.images?.[0] || item.images}  // ✅ handles both array and string
+      src={item.images?.[0] || item.images}  
       alt={item.name}
       className="w-full h-full object-cover"
     />
   </div>
-  <div className="min-w-0">  {/* ✅ added min-w-0 so text truncates */}
+  <div className="min-w-0">  
     <p className="text-sm font-bold truncate" style={{ color: "#3d1a2e" }}>{item.name}</p>
     <p className="text-xs" style={{ color: "#c4527a" }}>
       LKR {item.price.toFixed(2)}
@@ -160,7 +160,7 @@ export default function CheckoutPage() {
   </div>
 </div>
 
-                    {/* Quantity */}
+                    
                     <div className="col-span-3 flex items-center justify-center gap-2">
                       <button
                         className="w-7 h-7 rounded-lg flex items-center justify-center text-sm font-bold transition-all"
@@ -177,12 +177,12 @@ export default function CheckoutPage() {
                       >+</button>
                     </div>
 
-                    {/* Subtotal */}
+                    
                     <div className="col-span-3 text-right text-sm font-bold" style={{ color: "#3d1a2e" }}>
                       LKR {itemTotal.toFixed(2)}
                     </div>
 
-                    {/* Remove */}
+                    
                     <div className="col-span-1 flex justify-end">
                       <button
                         onClick={() => handleRemove(item.productId)}
@@ -207,11 +207,11 @@ export default function CheckoutPage() {
           )}
         </div>
 
-        {/* RIGHT — Order Summary + Form */}
+        
         {cart.length > 0 && (
           <div className="w-full lg:w-[340px] flex flex-col gap-4">
 
-            {/* Order Summary */}
+            
             <div
               className="rounded-2xl p-6"
               style={{
@@ -237,7 +237,7 @@ export default function CheckoutPage() {
               </div>
             </div>
 
-            {/* Delivery Form */}
+            
             <div
               className="rounded-2xl p-6"
               style={{
@@ -272,7 +272,7 @@ export default function CheckoutPage() {
                 ))}
               </div>
 
-              {/* Place Order Button */}
+              
               <button
                 onClick={placeOrder}
                 className="w-full mt-6 py-3 rounded-xl font-semibold text-sm text-white transition-all"

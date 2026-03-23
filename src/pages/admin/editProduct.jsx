@@ -27,7 +27,7 @@ export default function EditProductForm() {
   useEffect(() => {
     if (!locationData.state) {
       toast.error("Please select a product to edit");
-      navigate("/admin/products"); // Proper SPA navigation
+      navigate("/admin/products"); 
     }
   }, [locationData.state, navigate]);
 
